@@ -13,5 +13,21 @@ function printBoard()
 	echo "2 ${board[6]} ${board[7]} ${board[8]}"
 }
 
-printBoard
+function assign()
+{
+	rand=$((RANDOM%2))
+	if ((rand==1))
+	then
+		echo "Player assigned: O"
+		echo "Computer assigned: X"
+	else
+		echo "Player assigned: X"
+		echo "Computer assigned: O"
+	fi
+}
 
+
+
+#Main
+printBoard
+assign
