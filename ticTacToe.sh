@@ -36,10 +36,14 @@ function doToss()
 		echo "Computer won the toss, will play first."
 	fi
 }
-
+function displayBoard()
+{
+	printBoard
+}
 
 
 #Main
 printBoard
 assign
 doToss
+displayBoard
