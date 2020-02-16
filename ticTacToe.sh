@@ -15,7 +15,7 @@ function printBoard()
 
 function assign()
 {
-	rand=$((RANDOM%2))
+	local rand=$((RANDOM%2))
 	if ((rand==1))
 	then
 		echo "Player assigned: O"
@@ -26,8 +26,20 @@ function assign()
 	fi
 }
 
+function doToss()
+{
+	local rand=$((RANDOM%2))
+	if ((rand==1))
+	then
+		echo "Player won the toss, will play first."
+	else
+		echo "Computer won the toss, will play first."
+	fi
+}
+
 
 
 #Main
 printBoard
 assign
+doToss
